@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aft3r D4rk</title>
-    <link>http://localhost:1313/</link>
+    <link>https://Aft3rD4rk.gihub.io/</link>
     <description>Recent content on Aft3r D4rk</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 11 Jul 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://Aft3rD4rk.gihub.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>whoami</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://Aft3rD4rk.gihub.io/about/</link>
       <pubDate>Fri, 11 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://Aft3rD4rk.gihub.io/about/</guid>
       <description>&lt;body class=&#34;page page-about&#34;&gt;&#xD;&#xA;&lt;h1 id=&#34;typed-whoami&#34; data-typed=&#34;whoami.exe&#34;&gt;&lt;/h1&gt;&#xD;&#xA;&lt;!-- Centered and Circular Avatar --&gt;&#xD;&#xA;&lt;p style=&#34;text-align: center;&#34;&gt;&#xD;&#xA;  &lt;img src=&#34;https://cdn.pfps.gg/pfps/5059-thomas-shelby.png&#34; alt=&#34;avatar&#34; width=&#34;150&#34; style=&#34;border-radius: 50%;&#34;&gt;&#xD;&#xA;&lt;/p&gt;&#xD;&#xA;&lt;p&gt;Hello over there — I&amp;rsquo;m &lt;strong&gt;Aft3r D4rk&lt;/strong&gt;.&lt;br&gt;&#xA;But the real question is: &lt;strong&gt;who are &lt;em&gt;YOU&lt;/em&gt;?&lt;/strong&gt; (I hope you got the reference.)&lt;/p&gt;&#xA;&lt;p&gt;My main interest are endpoint security and cloud security . This blog will be about Windows Internals, Malware Analysis, Malware Development and maybe OSINT ( no i do not stalk people ) and reverse engineering from CrackMe challenges.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fiber Injection</title>
-      <link>http://localhost:1313/posts/fiber-injection/</link>
+      <link>https://Aft3rD4rk.gihub.io/posts/fiber-injection/</link>
       <pubDate>Tue, 11 Feb 2020 22:47:27 +1000</pubDate>
-      <guid>http://localhost:1313/posts/fiber-injection/</guid>
+      <guid>https://Aft3rD4rk.gihub.io/posts/fiber-injection/</guid>
       <description>&lt;p&gt;We all know threads — those small, poor workers who execute code for a process. A thread is the smallest unit of execution within a process.&lt;/p&gt;&#xA;&lt;p&gt;But have you ever heard of something called a fiber?&lt;/p&gt;&#xA;&lt;p&gt;No, I’m not talking about the dietary stuff you get from fruits and vegetables.&lt;/p&gt;&#xA;&lt;p&gt;So what on earth am I talking about?&lt;/p&gt;&#xA;&lt;meme image &gt;&#xD;&#xA;&lt;H1&gt;what is a fiber ?&lt;/H1&gt;&#xD;&#xA;&lt;p&gt;So Fibers are a unit of execution same as threads BUT it is manually scheduled by the application here is some facts about them :&lt;/p&gt;</description>
     </item>
     <item>
       <title>Intro to Windows Organs</title>
-      <link>http://localhost:1313/posts/intro-windows-internals/</link>
+      <link>https://Aft3rD4rk.gihub.io/posts/intro-windows-internals/</link>
       <pubDate>Sat, 11 Jan 2020 22:47:27 +1000</pubDate>
-      <guid>http://localhost:1313/posts/intro-windows-internals/</guid>
+      <guid>https://Aft3rD4rk.gihub.io/posts/intro-windows-internals/</guid>
       <description>&lt;p&gt;Hey traveller,&#xA;Over the years, Windows has evolved from a simple graphical shell into a complex operating system that powers everything from personal laptops to global enterprise infrastructure. As of February 2024, Windows dominates the global desktop operating system (OS) market with a 72% share. Over 90% of malware is designed to target Windows systems. Understanding how Windows works is a crucial pillar in knowing how to respond to threats or emulate adversaries. In simple terms, if you don&amp;rsquo;t understand what you&amp;rsquo;re defending, you&amp;rsquo;re just watching — not guarding.&lt;/p&gt;</description>
     </item>
   </channel>
