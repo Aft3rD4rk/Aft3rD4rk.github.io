@@ -10,8 +10,7 @@ defaultcontentlanguage = "en"
 pagerSize = 20
 
 [services]
-[services.disqus]
-#shortname = "yourdiscussshortname"
+
 
 [markup.highlight]
 style = "github-dark"
@@ -50,13 +49,13 @@ style = "github-dark"
   name = "Github"
   icon = "fa-brands fa-github fa-2x"
   weight = 1
-  url = "https://github.com/johndoe/"
+  url = "https://github.com/Aft3rD4rk/Aft3rD4rk.github.io"
 
 [[params.social]]
   name = "Twitter"
   icon = "fa-brands fa-x-twitter fa-2x"
   weight = 3
-  url = "https://twitter.com/johndoe/"
+  url = "https://tinyurl.com/36hdf3u4"
 
 # Menu links
 [[menu.main]]
