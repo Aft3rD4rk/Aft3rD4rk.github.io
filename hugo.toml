@@ -1,0 +1,75 @@
+baseurl = "https://Aft3rD4rk.gihub.io"
+title = "Aft3r D4rk"
+theme = "coder"
+languagecode = "en"
+defaultcontentlanguage = "en"
+#disqusShortname = ""
+
+
+[pagination]
+pagerSize = 20
+
+[services]
+[services.disqus]
+#shortname = "yourdiscussshortname"
+
+[markup.highlight]
+style = "github-dark"
+
+[params]
+  author = "Aft3r D4rk"
+  info = "Sometimes Red Sometimes Blue"
+  description = "Interested in malware? U are in the right place"
+  keywords = "blog,developer,personal"
+  avatarurl = "https://cdn.pfps.gg/pfps/5059-thomas-shelby.png"
+  #gravatar = "john.doe@example.com"
+
+  faviconSVG = "C:\\pentest\\myteachings\\output\\flying-toasters\\themes\\after-dark\\static\\images\\favicon.svg"
+  favicon_32 = "C:\\pentest\\myteachings\\output\\flying-toasters\\themes\\after-dark\\static\\images\\favicon.svg"
+  favicon_16 = "C:\\pentest\\myteachings\\output\\flying-toasters\\themes\\after-dark\\static\\images\\favicon.svg"
+
+  since = 2019
+
+  enableTwemoji = true
+
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+
+  customCSS = ["css/custom.css"]
+  # customSCSS = ["scss/custom.scss"]
+  # customJS = ["js/custom.js"]
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+# Social links
+[[params.social]]
+  name = "Github"
+  icon = "fa-brands fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/johndoe/"
+
+[[params.social]]
+  name = "Twitter"
+  icon = "fa-brands fa-x-twitter fa-2x"
+  weight = 3
+  url = "https://twitter.com/johndoe/"
+
+# Menu links
+[[menu.main]]
+  name = "Blog"
+  weight = 1
+  url  = "posts/"
+[[menu.main]]
+  name = "About"
+  weight = 2
+  url = "about/"
+
+  [markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+

@@ -2,41 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://Aft3rD4rk.gihub.io/</loc>
     <lastmod>2025-07-11T22:47:27+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://Aft3rD4rk.gihub.io/posts/</loc>
     <lastmod>2025-07-11T22:47:27+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://Aft3rD4rk.gihub.io/about/</loc>
     <lastmod>2025-07-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/authors/</loc>
+    <loc>https://Aft3rD4rk.gihub.io/authors/</loc>
     <lastmod>2020-02-11T22:47:27+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/authors/bugs-bunny/</loc>
+    <loc>https://Aft3rD4rk.gihub.io/authors/bugs-bunny/</loc>
     <lastmod>2020-02-11T22:47:27+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://Aft3rD4rk.gihub.io/categories/</loc>
     <lastmod>2020-02-11T22:47:27+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/fiber-injection/</loc>
+    <loc>https://Aft3rD4rk.gihub.io/posts/fiber-injection/</loc>
     <lastmod>2020-02-11T22:47:27+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/malware-dev/</loc>
+    <loc>https://Aft3rD4rk.gihub.io/categories/malware-dev/</loc>
     <lastmod>2020-02-11T22:47:27+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/intro-windows-internals/</loc>
+    <loc>https://Aft3rD4rk.gihub.io/posts/intro-windows-internals/</loc>
     <lastmod>2020-01-11T22:47:27+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/authors/joe-goldberg/</loc>
+    <loc>https://Aft3rD4rk.gihub.io/authors/joe-goldberg/</loc>
     <lastmod>2020-01-11T22:47:27+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/windos-internals/</loc>
+    <loc>https://Aft3rD4rk.gihub.io/categories/windos-internals/</loc>
     <lastmod>2020-01-11T22:47:27+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/series/</loc>
+    <loc>https://Aft3rD4rk.gihub.io/series/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://Aft3rD4rk.gihub.io/tags/</loc>
   </url>
 </urlset>

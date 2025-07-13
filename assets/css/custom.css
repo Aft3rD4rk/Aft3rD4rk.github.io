@@ -1,0 +1,118 @@
+/* After Dark style for body and main content */
+body {
+  background-color: #0a0a0a !important; /* very dark almost black */
+  color: #00ffcc !important; /* neon cyan-ish text */
+  font-family: 'Fira Code', monospace, monospace; /* optional: monospace font */
+}
+
+/* Links in bright cyan */
+a, a:visited {
+  color: #00fff0 !important;
+  text-decoration: underline;
+}
+
+/* Headings in brighter teal */
+h1, h2, h3, h4, h5, h6 {
+  color: #00e6cc !important;
+}
+
+/* Paragraphs and list items slightly lighter */
+p, li {
+  color: #33ffdd !important;
+}
+
+/* Circular avatar glow */
+img {
+  box-shadow: 0 0 15px #00fff0;
+  border-radius: 50% !important;
+}
+
+/* Code blocks or inline code */
+code, pre {
+  background-color: #002b2b !important;
+  color: #00ffcc !important;
+  font-family: 'Fira Code', monospace;
+}
+
+/* Optional: cursor glow on links */
+a:hover {
+  color: #00ffea;
+  text-shadow:
+    0 0 8px #00fff0,
+    0 0 20px #00fff0,
+    0 0 30px #00fff0,
+    0 0 40px #00fff0;
+}
+
+#typed-name {
+  font-family: 'Fira Code', monospace;
+  color: #00fff0;
+  font-size: 2.5rem;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  border-right: 2px solid #00fff0;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #00fff0 }
+}
+
+
+/* 🔵 Bold site title */
+.navigation-title {
+  font-weight: bold;
+  color: #00fff0; /* optional: After Dark color */
+  text-decoration: none;
+}
+
+/* 🔵 Bold nav links */
+.navigation-link {
+  font-weight: bold;
+  color: #00fff0; /* optional */
+  text-decoration: none;
+}
+
+/* 🔵 Remove underline on hover */
+.navigation-link:hover,
+.navigation-title:hover {
+  text-decoration: none;
+  color: #00ffea; /* optional glow color */
+}
+
+/* Optional: Glow effect */
+.navigation-link,
+.navigation-title {
+  text-shadow: 0 0 5px #00fff0, 0 0 10px #00fff0;
+}
+
+#typed-whoami {
+  font-family: 'Fira Code', monospace;
+  font-size: 2.4rem;
+  color: #00fff0;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  border-right: 2px solid #00fff0;
+  animation: blink-caret 0.75s step-end infinite;
+  margin: 1.5rem auto;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #00fff0; }
+}
+
+main h1:first-of-type {
+  display: none;
+}
+
+body.page-about main h1:first-of-type {
+  display: none;
+}
+
