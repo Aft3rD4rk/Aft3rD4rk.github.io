@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Intro to Windows Organs · Aft3r D4rk
+</title>
+  <link rel="icon" href="/logo-dark.svg" type="image/x-icon">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Aft3r D4rk">
+<meta name="description" content="Hey traveller,
+Over the years, Windows has evolved from a simple graphical shell into a complex operating system that powers everything from personal laptops to global enterprise infrastructure. As of February 2024, Windows dominates the global desktop operating system (OS) market with a 72% share. Over 90% of malware is designed to target Windows systems. Understanding how Windows works is a crucial pillar in knowing how to respond to threats or emulate adversaries. In simple terms, if you don&rsquo;t understand what you&rsquo;re defending, you&rsquo;re just watching — not guarding.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Intro to Windows Organs">
+  <meta name="twitter:description" content="Hey traveller, Over the years, Windows has evolved from a simple graphical shell into a complex operating system that powers everything from personal laptops to global enterprise infrastructure. As of February 2024, Windows dominates the global desktop operating system (OS) market with a 72% share. Over 90% of malware is designed to target Windows systems. Understanding how Windows works is a crucial pillar in knowing how to respond to threats or emulate adversaries. In simple terms, if you don’t understand what you’re defending, you’re just watching — not guarding.">
+
+<meta property="og:url" content="http://localhost:1313/posts/intro-windows-internals/">
+  <meta property="og:site_name" content="Aft3r D4rk">
+  <meta property="og:title" content="Intro to Windows Organs">
+  <meta property="og:description" content="Hey traveller, Over the years, Windows has evolved from a simple graphical shell into a complex operating system that powers everything from personal laptops to global enterprise infrastructure. As of February 2024, Windows dominates the global desktop operating system (OS) market with a 72% share. Over 90% of malware is designed to target Windows systems. Understanding how Windows works is a crucial pillar in knowing how to respond to threats or emulate adversaries. In simple terms, if you don’t understand what you’re defending, you’re just watching — not guarding.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-01-11T22:47:27+10:00">
+    <meta property="article:modified_time" content="2020-01-11T22:47:27+10:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/intro-windows-internals/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+  
+    
+    <link rel="stylesheet" href="/css/custom.css" media="screen">
+  
+
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="#ZgotmplZ" sizes="any">
+<link rel="icon" type="image/png" href="#ZgotmplZ" sizes="32x32">
+<link rel="icon" type="image/png" href="#ZgotmplZ" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+  <strong>Aft3r D4rk</strong>
+</a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+         
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/intro-windows-internals/">
+              Intro to Windows Organs
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2020-01-11T22:47:27&#43;10:00">
+                January 11, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              5-minute read
+            </span>
+          </div>
+          <div class="authors">
+  <i class="fa-solid fa-user" aria-hidden="true"></i>
+    <a href="/authors/joe-goldberg/">Joe Goldberg</a></div>
+
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/categories/windos-internals/">Windos Internals</a></div>
+
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>Hey traveller,
+Over the years, Windows has evolved from a simple graphical shell into a complex operating system that powers everything from personal laptops to global enterprise infrastructure. As of February 2024, Windows dominates the global desktop operating system (OS) market with a 72% share. Over 90% of malware is designed to target Windows systems. Understanding how Windows works is a crucial pillar in knowing how to respond to threats or emulate adversaries. In simple terms, if you don&rsquo;t understand what you&rsquo;re defending, you&rsquo;re just watching — not guarding.</p>
+<p><img src="/images/windows-arti/who-will-win.jpg" alt=""
+style="border-radius: 0 !important; clip-path: none !important; width: auto; height: auto;"></p>
+<h2 id="lord-of-the-rings">
+  Lord of the Rings
+  <a class="heading-link" href="#lord-of-the-rings">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The image below explains the concept of CPU privilege rings, including user mode and kernel mode, which apply across all operating systems.
+Rings are different privilege levels that the CPU uses to distinguish what a piece of code is allowed to do. Ring 0 and Ring 3 are the most important for now:</p>
+<ul>
+<li>Ring 0 (Kernel Mode) has full access to the system.</li>
+<li>Ring 3 (User Mode) is restricted and used for applications</li>
+</ul>
+<p>Rings 1 and 2 are rarely used in modern operating systems. Some OS designs may use them for specific tasks or drivers, but most operating systems skip these rings entirely.</p>
+<p><img src="/images/windows-arti/rings.jpg" alt=""
+style="border-radius: 0 !important; clip-path: none !important; width: auto; height: auto;"></p>
+<h2 id="ring-3-user-mod-vs-ring-0-kernel-mod">
+  Ring 3 (User mod) VS Ring 0 (kernel mod)
+  <a class="heading-link" href="#ring-3-user-mod-vs-ring-0-kernel-mod">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Ring 3, also known as user mode, is where us peasants live with the least privileges. We can’t do much without asking for permission from Ring 0, the boss. Basically, all your applications like Notepad, WannaCry, or even your browser — run in user mode. On the other hand, Ring 0, aka kernel mode, has the highest level of privileges. Any code running in kernel mode can execute any CPU instruction and access any part of memory — this is where things like rootkits operate. If code in Ring 0 crashes or gets compromised, the whole system can go down with it.</p>
+<p>So, whenever you try to perform any privileged action (remember, we&rsquo;re just peasants), we have to ask the kernel to do it on our behalf. The kernel checks whether we’re allowed to do that action and only then proceeds.</p>
+<p><img src="/images/windows-arti/rings1.jpg" alt=""
+style="border-radius: 0 !important; clip-path: none !important; width: auto; height: auto;"></p>
+<h2 id="what-is-a-dll-very-fast-">
+  what is a DLL VERY FAST ?
+  <a class="heading-link" href="#what-is-a-dll-very-fast-">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>A DLL (Dynamic-Link Library) is a file that contains code and data that can be used by multiple programs at the same time in Windows. It makes it easier for developers to import and use functions that are already written, instead of coding everything from scratch.</p>
+<p>For example, instead of writing your own function to open a file, you can just use the <a href="https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilea"  class="external-link" target="_blank" rel="noopener">CreateFileA</a> function, which is exported from a DLL called kernel32.dll.</p>
+<p>Just a quick note: to use any function that&rsquo;s exported by a DLL, the DLL that contains the function must be loaded into memory. When you boot your fancy Windows OS, it automatically loads a few essential DLLs , without them, Windows wouldn&rsquo;t function. These include ntdll.dll, kernel32.dll, advapi32.dll, user32.dll, and others.</p>
+<h2 id="architecture-of-windows">
+  Architecture of Windows
+  <a class="heading-link" href="#architecture-of-windows">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><img src="/images/windows-arti/windows-arti.jpg" alt=""
+style="border-radius: 0 !important; clip-path: none !important; width: auto; height: auto;"></p>
+<p>So Bob the Builder, since you’re here, Let’s talk about the architecture of Windows in general.</p>
+<p>But before we dive in, here are a few definitions to clarify what we’re dealing with:</p>
+<ul>
+<li>User processes: Basically, these are processes that do the work on your behalf when you take any action — like opening a file. Think of application processes like chrome.exe or notepad.exe.</li>
+<li>Service processes: These represent background services installed on your machine, like an SQL database, FTP server, or any custom service you’ve installed.</li>
+<li>System processes: These are used by the system itself to perform critical tasks. A great example is lsass.exe, which is responsible for authenticating users.</li>
+<li>Subsystem DLLs: These are essential DLLs provided by Windows, like kernel32.dll and user32.dll. (⚠️ Note: ntdll.dll is not considered a subsystem DLL — it lives in its own universe.)</li>
+<li>csrss.exe process: To simplify it. It’s a critical system process. If your favorite color is blue, try killing the process…</li>
+<li>ntdll.dll: This is the only one allowed to speak directly to the majestic kernel-mode.
+It contains Native API functions that allow communication between user mode and kernel mode. (Don’t worry you’ll fully understand Native APIs once I walk you through an example.)</li>
+</ul>
+<p>And to make things easier for me (and hopefully less painful for you), I won’t explain everything raw and hope that GRC people say “I understand.”
+They’ll just say “Compliant” anyway.</p>
+<p>Let’s say you open a file called CISSP_IS_NOT_technical.txt.</p>
+<p>1- Your user process (for example, notepad.exe) wants to open the file. It calls the <a href="https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilea"  class="external-link" target="_blank" rel="noopener">CreateFileA</a> function, which is exported by kernel32.dll (a subsystem DLL). (And please, don’t panic. Yes, the function is called &ldquo;CreateFileA&rdquo; even if you&rsquo;re just reading a file. That’s because the function’s behavior depends on the dwDesiredAccess parameter, which you can set to just read the file.)</p>
+<p>2- kernel32.dll doesn’t talk to the kernel directly. Instead, it passes the request to ntdll.dll</p>
+<p>3- ntdll.dll finds the equivalent Native API function, which is NtCreateFile. It sets up all the required arguments in a very low-level structure format (you don&rsquo;t see this in normal WinAPI calls).</p>
+<p>4- ntdll.dll then performs a syscall. This is how it translates the function request from user mode into a kernel-mode request.</p>
+<p>(I&rsquo;ll just touch the surface of the kernel to keep things simple )</p>
+<p>5- the Windows kernel kicks in. It performs the necessary checks , like whether the peasant has permission to open the file, and then grants or denies access.</p>
+<p>In Summary :</p>
+<p>kernel32.dll → passes to ntdll.dll → calls NtCreateFile → syscall → kernel handles the rest.</p>
+<p>Note: Sometimes you’ll see that a system process skips the subsystem DLL step and communicates directly with ntdll.dll to use a Native API.</p>
+<p>But remember — only ntdll.dll is allowed to perform the syscall.
+If any other code tries to perform a syscall directly and communicate with the kernel, that’s considered an Indicator of Compromise (IOC).</p>
+<p>We’ll dive deeper into syscalls and how they work in future blog posts.</p>
+<p>Anyway, that&rsquo;s enough typing for me . I&rsquo;m going to watch <em>YOU</em> Season 5.</p>
+<p><img src="/images/windows-arti/joe.gif" alt="joe goldberg"
+style="border-radius: 0 !important; clip-path: none !important; width: auto; height: auto;"></p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script>
+  window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yourdiscussshortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+    
+    document.addEventListener('themeChanged', function (e) { 
+        if (document.readyState == 'complete') {
+          DISQUS.reset({ reload: true, config: disqus_config });
+        }
+    });
+</script>
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2025
+     Aft3r D4rk 
+    
+  </section>
+</footer>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const el = document.getElementById("typed-name");
+    const text = el.getAttribute("data-typed");
+    let i = 0;
+    function type() {
+      if (i < text.length) {
+        el.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 150);
+      }
+    }
+    type();
+  });
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const el = document.getElementById("typed-whoami");
+    const text = el.getAttribute("data-typed");
+    let i = 0;
+    function type() {
+      if (i < text.length) {
+        el.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, 130);
+      }
+    }
+    type();
+  });
+</script>
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

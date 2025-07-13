@@ -1,0 +1,15 @@
++++
+title = "My First Post"
+date = 2025-07-11T17:00:00+10:00
+draft = false
+tags = ["hugo", "blog"]
++++
+
+# Hello World!
+
+This is my **first blog post** using Hugo with the Coder theme.
+
+- You can write **Markdown** here.
+- Add images, links, code blocks, etc.
+
+Happy blogging!

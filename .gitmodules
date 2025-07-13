@@ -1,0 +1,7 @@
+[submodule "themes/coder"]
+	path = themes/coder
+	url = https://github.com/luizdepra/hugo-coder.git
+[submodule "public1"]
+	path = public1
+	url = https://github.com/Aft3rD4rk/Aft3rD4rk.github.io
+	branch = main
