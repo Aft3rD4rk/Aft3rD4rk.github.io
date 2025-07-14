@@ -108,11 +108,8 @@ a:hover {
   50% { border-color: #00fff0; }
 }
 
-main h1:first-of-type {
-  display: none;
-}
 
-body.page-about main h1:first-of-type {
+/* body.page-about main h1:first-of-type {
   display: none;
-}
+} */
 
