@@ -2,17 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Windos Internals on Aft3r D4rk</title>
-    <link>https://Aft3rD4rk.gihub.io/categories/windos-internals/</link>
+    <link>http://localhost:1313/categories/windos-internals/</link>
     <description>Recent content in Windos Internals on Aft3r D4rk</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 11 Jan 2020 22:47:27 +1000</lastBuildDate>
-    <atom:link href="https://Aft3rD4rk.gihub.io/categories/windos-internals/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Jul 2025 22:47:27 +1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/windos-internals/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intro to Windows Internals</title>
+      <link>http://localhost:1313/posts/mapping-injection/</link>
+      <pubDate>Fri, 11 Jul 2025 22:47:27 +1000</pubDate>
+      <guid>http://localhost:1313/posts/mapping-injection/</guid>
+      <description>&lt;p&gt;Yo, yo, yo! 1-4-8-3 to the 3 to the 6 to the 9. Representin&amp;rsquo; the ABQ — what up, b****?&lt;/p&gt;&#xA;&lt;p&gt;So today, I woke up, drank my morning coffee, and while reading the newsletter, it crossed my mind to try using mapping injection techniques to bypass Windows Defender — and bring back that red team glory.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/mapping/me-rare.jpg&#34; alt=&#34;&#34;&#xD;&#xA;style=&#34;border-radius: 0 !important; clip-path: none !important; width: auto; height: auto;&#34;&gt;&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt; &amp;lt;audio controls&amp;gt;&#xD;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;  &lt;source src=&#34;http://localhost:1313/audio/green.mp3&#34; type=&#34;audio/mpeg&#34;&gt;&#xD;&#xA;  to listne to the audio https://www.101soundboards.com/sounds/536723-green-whats-your-problem&#xD;&#xA;&lt;/audio&gt;</description>
+    </item>
     <item>
       <title>Intro to Windows Organs</title>
-      <link>https://Aft3rD4rk.gihub.io/posts/intro-windows-internals/</link>
+      <link>http://localhost:1313/posts/intro-windows-internals/</link>
       <pubDate>Sat, 11 Jan 2020 22:47:27 +1000</pubDate>
-      <guid>https://Aft3rD4rk.gihub.io/posts/intro-windows-internals/</guid>
+      <guid>http://localhost:1313/posts/intro-windows-internals/</guid>
       <description>&lt;p&gt;Hey traveller,&#xA;Over the years, Windows has evolved from a simple graphical shell into a complex operating system that powers everything from personal laptops to global enterprise infrastructure. As of February 2024, Windows dominates the global desktop operating system (OS) market with a 72% share. Over 90% of malware is designed to target Windows systems. Understanding how Windows works is a crucial pillar in knowing how to respond to threats or emulate adversaries. In simple terms, if you don&amp;rsquo;t understand what you&amp;rsquo;re defending, you&amp;rsquo;re just watching — not guarding.&lt;/p&gt;</description>
     </item>
   </channel>

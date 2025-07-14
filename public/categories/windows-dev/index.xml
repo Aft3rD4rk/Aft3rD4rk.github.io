@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows Dev on Aft3r D4rk</title>
+    <link>http://localhost:1313/categories/windows-dev/</link>
+    <description>Recent content in Windows Dev on Aft3r D4rk</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 11 Jul 2025 22:47:27 +1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/windows-dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intro to Windows Internals</title>
+      <link>http://localhost:1313/posts/mapping-injection/</link>
+      <pubDate>Fri, 11 Jul 2025 22:47:27 +1000</pubDate>
+      <guid>http://localhost:1313/posts/mapping-injection/</guid>
+      <description>&lt;p&gt;Yo, yo, yo! 1-4-8-3 to the 3 to the 6 to the 9. Representin&amp;rsquo; the ABQ — what up, b****?&lt;/p&gt;&#xA;&lt;p&gt;So today, I woke up, drank my morning coffee, and while reading the newsletter, it crossed my mind to try using mapping injection techniques to bypass Windows Defender — and bring back that red team glory.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/mapping/me-rare.jpg&#34; alt=&#34;&#34;&#xD;&#xA;style=&#34;border-radius: 0 !important; clip-path: none !important; width: auto; height: auto;&#34;&gt;&lt;/p&gt;&#xA;&lt;audio controls&gt;&#xD;&#xA;  &lt;source src=&#34;http://localhost:1313/audio/green.mp3&#34; type=&#34;audio/mpeg&#34;&gt;&#xD;&#xA;  to listne to the audio https://www.101soundboards.com/sounds/536723-green-whats-your-problem&#xD;&#xA;&lt;/audio&gt;&#xD;&#xA;&lt;img src=&#34;http://localhost:1313/images/mapping/green.gif&#34; alt=&#34;Funny meme&#34; style=&#34;border-radius: 0 !important; clip-path: none !important; width: auto; height: auto;&#34;&gt;</description>
+    </item>
+  </channel>
+</rss>
