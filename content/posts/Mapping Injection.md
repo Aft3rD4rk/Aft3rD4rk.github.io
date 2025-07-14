@@ -1,12 +1,12 @@
 +++ 
 draft = false
 date = 2025-07-11T22:47:27+10:00
-title = "Intro to Windows Internals"
+title = "Mapping Injection"
 description = ""
 slug = ""
 authors = ["Jesse Pinkman"]
 tags = []
-categories = ["Windows dev"]
+categories = ["Malware Dev"]
 externalLink = ""
 series = []
 +++
