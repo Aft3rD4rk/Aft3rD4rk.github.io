@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Aft3r D4rk</title>
-    <link>https://Aft3rD4rk.gihub.io/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on Aft3r D4rk</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 11 Feb 2020 22:47:27 +1000</lastBuildDate>
-    <atom:link href="https://Aft3rD4rk.gihub.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Jul 2025 22:47:27 +1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Malware Dev</title>
-      <link>https://Aft3rD4rk.gihub.io/categories/malware-dev/</link>
-      <pubDate>Tue, 11 Feb 2020 22:47:27 +1000</pubDate>
-      <guid>https://Aft3rD4rk.gihub.io/categories/malware-dev/</guid>
+      <title>Windos Internals</title>
+      <link>http://localhost:1313/categories/windos-internals/</link>
+      <pubDate>Fri, 11 Jul 2025 22:47:27 +1000</pubDate>
+      <guid>http://localhost:1313/categories/windos-internals/</guid>
       <description></description>
     </item>
     <item>
-      <title>Windos Internals</title>
-      <link>https://Aft3rD4rk.gihub.io/categories/windos-internals/</link>
-      <pubDate>Sat, 11 Jan 2020 22:47:27 +1000</pubDate>
-      <guid>https://Aft3rD4rk.gihub.io/categories/windos-internals/</guid>
+      <title>Malware Dev</title>
+      <link>http://localhost:1313/categories/malware-dev/</link>
+      <pubDate>Tue, 11 Feb 2020 22:47:27 +1000</pubDate>
+      <guid>http://localhost:1313/categories/malware-dev/</guid>
       <description></description>
     </item>
   </channel>
