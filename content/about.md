@@ -4,7 +4,6 @@ date = 2025-07-11
 type = "page"
 +++
 
-<body class="page page-about">
 
 
 

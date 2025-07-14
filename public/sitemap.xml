@@ -11,16 +11,16 @@
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-07-11T22:47:27+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/mapping-injection/</loc>
-    <lastmod>2025-07-11T22:47:27+10:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/authors/jesse-pinkman/</loc>
     <lastmod>2025-07-11T22:47:27+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>http://localhost:1313/categories/malware-dev/</loc>
     <lastmod>2025-07-11T22:47:27+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/windos-internals/</loc>
+    <loc>http://localhost:1313/posts/mapping-injection/</loc>
+    <lastmod>2025-07-11T22:47:27+10:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-07-11T22:47:27+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
@@ -32,13 +32,13 @@
     <loc>http://localhost:1313/posts/fiber-injection/</loc>
     <lastmod>2020-02-11T22:47:27+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/malware-dev/</loc>
-    <lastmod>2020-02-11T22:47:27+10:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/posts/intro-windows-internals/</loc>
     <lastmod>2020-01-11T22:47:27+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/authors/joe-goldberg/</loc>
+    <lastmod>2020-01-11T22:47:27+10:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/windos-internals/</loc>
     <lastmod>2020-01-11T22:47:27+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/series/</loc>

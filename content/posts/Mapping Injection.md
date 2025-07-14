@@ -1,6 +1,6 @@
 +++ 
 draft = false
-date = 2020-3-20T22:47:27+10:00
+date = 2025-07-11T22:47:27+10:00
 title = "Mapping Injection"
 description = ""
 slug = ""
