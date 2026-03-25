@@ -20,7 +20,7 @@ type = "page"
 Hello over there — I'm **Aft3r D4rk**.  
 But the real question is: **who are _YOU_?** (I hope you got the reference.)
 
-My main interest are endpoint security and cloud security . This blog will be about Windows Internals, Malware Analysis, Malware Development and maybe OSINT ( no i do not stalk people ) and reverse engineering from CrackMe challenges. 
+My main interest are endpoint security and cloud security . This blog will be about Windows Internals, Malware Analysis, Malware Development and maybe OSINT ( no i do not stalk people ). 
 
 
 
