@@ -9,6 +9,13 @@
     <lastBuildDate>Fri, 11 Jul 2025 22:47:27 +1000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Hooking apis where ever I please</title>
+      <link>http://localhost:1313/posts/hooking-apis-where-ever-i-please/</link>
+      <pubDate>Fri, 11 Jul 2025 22:47:27 +1000</pubDate>
+      <guid>http://localhost:1313/posts/hooking-apis-where-ever-i-please/</guid>
+      <description>&lt;p&gt;Today we&amp;rsquo;re gonna hook windows api functions&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/hooking/hook.jpg&#34; alt=&#34;ARE U BLIND?  NOT MY FAULT THE IMAGE IS NOT LOADING&#34;&#xD;&#xA;style=&#34;border-radius: 0 !important; clip-path: none !important; width: auto; height: auto;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;API hooking is a technique that modifies the behavior of a Windows API function. For example, you can change the functionality of MessageBox to display a different message.&lt;/p&gt;&#xA;&lt;p&gt;Hooking is a two-edged sword in Windows. It’s used by EDRs and AVs to intercept API calls and inspect them before they even reach the kernel (essentially a userland defensive mechanism). At the same time, it can also be abused by attackers as a technique to bypass EDR/AV detection by altering the functionality of an API, making it do something else.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Mapping Injection</title>
       <link>http://localhost:1313/posts/mapping-injection/</link>
       <pubDate>Fri, 11 Jul 2025 22:47:27 +1000</pubDate>
@@ -27,7 +34,7 @@
       <link>http://localhost:1313/posts/fiber-injection/</link>
       <pubDate>Tue, 11 Feb 2020 22:47:27 +1000</pubDate>
       <guid>http://localhost:1313/posts/fiber-injection/</guid>
-      <description>&lt;p&gt;We all know threads — those small, poor workers who execute code for a process. A thread is the smallest unit of execution within a process.&lt;/p&gt;&#xA;&lt;p&gt;But have you ever heard of something called a fiber?&lt;/p&gt;&#xA;&lt;p&gt;No, I’m not talking about the dietary stuff you get from fruits and vegetables.&lt;/p&gt;&#xA;&lt;p&gt;So what on earth am I talking about?&lt;/p&gt;&#xA;&lt;meme image &gt;&#xD;&#xA;&lt;H1&gt;what is a fiber ?&lt;/H1&gt;&#xD;&#xA;&lt;p&gt;So Fibers are a unit of execution same as threads BUT it is manually scheduled by the application here is some facts about them :&lt;/p&gt;</description>
+      <description>&lt;p&gt;We all know threads, those small, poor workers who execute code for a process. A thread is the smallest unit of execution within a process.&lt;/p&gt;&#xA;&lt;p&gt;But have you ever heard of something called a fiber?&lt;/p&gt;&#xA;&lt;p&gt;No, I’m not talking about the dietary stuff you get from fruits and vegetables.&lt;/p&gt;&#xA;&lt;p&gt;So what on earth am I talking about?&lt;/p&gt;&#xA;&lt;meme image &gt;&#xD;&#xA;&lt;H1&gt;what is a fiber ?&lt;/H1&gt;&#xD;&#xA;&lt;p&gt;So Fibers are a unit of execution same as threads BUT it is manually scheduled by the application here is some facts about them :&lt;/p&gt;</description>
     </item>
     <item>
       <title>Intro to Windows Organs</title>

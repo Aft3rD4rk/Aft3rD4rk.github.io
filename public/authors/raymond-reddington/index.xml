@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Raymond Reddington on Aft3r D4rk</title>
+    <link>http://localhost:1313/authors/raymond-reddington/</link>
+    <description>Recent content in Raymond Reddington on Aft3r D4rk</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 11 Jul 2025 22:47:27 +1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/authors/raymond-reddington/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>windows Processes</title>
+      <link>http://localhost:1313/posts/windows-processes/</link>
+      <pubDate>Fri, 11 Jul 2025 22:47:27 +1000</pubDate>
+      <guid>http://localhost:1313/posts/windows-processes/</guid>
+      <description>&lt;p&gt;Hi there continue the juorny to into windows internals gonna dive a little bet deep into processes.&lt;/p&gt;&#xA;&lt;p&gt;Why are we diving into processes? Because it&amp;rsquo;s fun (at least for me). Understanding processes is important for anyone working in cyberspace — unless you&amp;rsquo;re a GRC person (in which case, why on earth are you looking at Windows processes? You probably barely know how to use Task Manager).&lt;/p&gt;&#xA;&lt;p&gt;But seriously, knowing how processes work is crucial for detecting malicious activity. In fact, you can solve entire cases using just memory forensics. Tools like Volatility allow you to analyze memory dumps or VM snapshots to identify what processes were spawned during an incident; no disk forensics needed.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

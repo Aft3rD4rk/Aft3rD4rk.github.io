@@ -6,12 +6,12 @@ description = ""
 slug = ""
 authors = ["Bugs Bunny"]
 tags = []
-categories = ["Malware Dev"]
+categories = ["Malware"]
 externalLink = ""
 series = []
 +++
 
-We all know threads — those small, poor workers who execute code for a process. A thread is the smallest unit of execution within a process.
+We all know threads, those small, poor workers who execute code for a process. A thread is the smallest unit of execution within a process.
 
 But have you ever heard of something called a fiber?
 
@@ -30,7 +30,7 @@ So Fibers are a unit of execution same as threads BUT it is manually scheduled b
 - No parallelism unless you do the work: Fibers do not run in parallel on multi-core CPUs unless you explicitly run them on multiple threads.
 - Lightweight and efficient: Fibers consume very few system resources. They're much cheaper and lighter than threads when it comes to executing code.
 
-They're no longer widely used nowadays — because who on earth wants to create an application and do all the heavy lifting themselves, like managing code execution, scheduling, creating threads for parallelism, and manually switching between fibers? 
+They're no longer widely used nowadays. Because who on earth wants to create an application and do all the heavy lifting themselves, like managing code execution, scheduling, creating threads for parallelism, and manually switching between fibers? 
 
 🤓☝️:"Actually, I use fibers when developing applications."
 

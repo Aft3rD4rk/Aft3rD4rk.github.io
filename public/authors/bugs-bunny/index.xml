@@ -13,7 +13,7 @@
       <link>http://localhost:1313/posts/fiber-injection/</link>
       <pubDate>Tue, 11 Feb 2020 22:47:27 +1000</pubDate>
       <guid>http://localhost:1313/posts/fiber-injection/</guid>
-      <description>&lt;p&gt;We all know threads — those small, poor workers who execute code for a process. A thread is the smallest unit of execution within a process.&lt;/p&gt;&#xA;&lt;p&gt;But have you ever heard of something called a fiber?&lt;/p&gt;&#xA;&lt;p&gt;No, I’m not talking about the dietary stuff you get from fruits and vegetables.&lt;/p&gt;&#xA;&lt;p&gt;So what on earth am I talking about?&lt;/p&gt;&#xA;&lt;meme image &gt;&#xD;&#xA;&lt;H1&gt;what is a fiber ?&lt;/H1&gt;&#xD;&#xA;&lt;p&gt;So Fibers are a unit of execution same as threads BUT it is manually scheduled by the application here is some facts about them :&lt;/p&gt;</description>
+      <description>&lt;p&gt;We all know threads, those small, poor workers who execute code for a process. A thread is the smallest unit of execution within a process.&lt;/p&gt;&#xA;&lt;p&gt;But have you ever heard of something called a fiber?&lt;/p&gt;&#xA;&lt;p&gt;No, I’m not talking about the dietary stuff you get from fruits and vegetables.&lt;/p&gt;&#xA;&lt;p&gt;So what on earth am I talking about?&lt;/p&gt;&#xA;&lt;meme image &gt;&#xD;&#xA;&lt;H1&gt;what is a fiber ?&lt;/H1&gt;&#xD;&#xA;&lt;p&gt;So Fibers are a unit of execution same as threads BUT it is manually scheduled by the application here is some facts about them :&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

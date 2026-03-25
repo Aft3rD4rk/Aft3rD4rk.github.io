@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  windows Processes · Aft3r D4rk
+</title>
+  <link rel="icon" href="/logo-dark.svg" type="image/x-icon">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Aft3r D4rk">
+<meta name="description" content="Hi there continue the juorny to into windows internals gonna dive a little bet deep into processes.
+Why are we diving into processes? Because it&rsquo;s fun (at least for me). Understanding processes is important for anyone working in cyberspace — unless you&rsquo;re a GRC person (in which case, why on earth are you looking at Windows processes? You probably barely know how to use Task Manager).
+But seriously, knowing how processes work is crucial for detecting malicious activity. In fact, you can solve entire cases using just memory forensics. Tools like Volatility allow you to analyze memory dumps or VM snapshots to identify what processes were spawned during an incident; no disk forensics needed.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="windows Processes">
+  <meta name="twitter:description" content="Hi there continue the juorny to into windows internals gonna dive a little bet deep into processes.
+Why are we diving into processes? Because it’s fun (at least for me). Understanding processes is important for anyone working in cyberspace — unless you’re a GRC person (in which case, why on earth are you looking at Windows processes? You probably barely know how to use Task Manager).
+But seriously, knowing how processes work is crucial for detecting malicious activity. In fact, you can solve entire cases using just memory forensics. Tools like Volatility allow you to analyze memory dumps or VM snapshots to identify what processes were spawned during an incident; no disk forensics needed.">
+
+<meta property="og:url" content="http://localhost:1313/posts/windows-processes/">
+  <meta property="og:site_name" content="Aft3r D4rk">
+  <meta property="og:title" content="windows Processes">
+  <meta property="og:description" content="Hi there continue the juorny to into windows internals gonna dive a little bet deep into processes.
+Why are we diving into processes? Because it’s fun (at least for me). Understanding processes is important for anyone working in cyberspace — unless you’re a GRC person (in which case, why on earth are you looking at Windows processes? You probably barely know how to use Task Manager).
+But seriously, knowing how processes work is crucial for detecting malicious activity. In fact, you can solve entire cases using just memory forensics. Tools like Volatility allow you to analyze memory dumps or VM snapshots to identify what processes were spawned during an incident; no disk forensics needed.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-07-11T22:47:27+10:00">
+    <meta property="article:modified_time" content="2025-07-11T22:47:27+10:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/windows-processes/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+  
+    
+    <link rel="stylesheet" href="/css/custom.css" media="screen">
+  
+
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="#ZgotmplZ" sizes="any">
+<link rel="icon" type="image/png" href="#ZgotmplZ" sizes="32x32">
+<link rel="icon" type="image/png" href="#ZgotmplZ" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto page-windows processes">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://aft3rd4rk.github.io/">
+  <strong>Aft3r D4rk</strong>
+</a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+         
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/windows-processes/">
+              windows Processes
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2025-07-11T22:47:27&#43;10:00">
+                July 11, 2025
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          <div class="authors">
+  <i class="fa-solid fa-user" aria-hidden="true"></i>
+    <a href="/authors/raymond-reddington/">Raymond Reddington</a></div>
+
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/categories/windows-internals/">Windows Internals</a></div>
+
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>Hi there continue the juorny to into windows internals gonna dive a little bet deep into processes.</p>
+<p>Why are we diving into processes? Because it&rsquo;s fun (at least for me). Understanding processes is important for anyone working in cyberspace — unless you&rsquo;re a GRC person (in which case, why on earth are you looking at Windows processes? You probably barely know how to use Task Manager).</p>
+<p>But seriously, knowing how processes work is crucial for detecting malicious activity. In fact, you can solve entire cases using just memory forensics. Tools like Volatility allow you to analyze memory dumps or VM snapshots to identify what processes were spawned during an incident; no disk forensics needed.</p>
+<p>Imagine you&rsquo;re managing a company where each department has a head or boss, and under that boss are employees. In this analogy, the boss or head of the department represents a process, and the employees are the threads that do the actual work.</p>
+<p>A process is a set of resources used to execute a program — typically, this means an executable file (EXE). To avoid confusion later on, if you run a script such as malware.ps1 (PowerShell) or malware.py (Python), the system will actually start the corresponding interpreter — powershell.exe or python.exe. The threads within that process then execute the script code.</p>
+<h2 id="process-components">
+  Process Components
+  <a class="heading-link" href="#process-components">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>
+<p>virtual address space:</p>
+</li>
+<li>
+<p>executable image ( file exe or dll or ps1 etc)</p>
+</li>
+<li>
+<p>handle table</p>
+</li>
+<li>
+<p>access token ( security token)</p>
+</li>
+<li>
+<p>threads  ( at least one thread of excution often called the primary thread (I like to call it main thread) )</p>
+</li>
+<li>
+<p>a unique process identifier (PID)</p>
+</li>
+<li>
+<p>environment variables</p>
+</li>
+<li>
+<p> a priority class</p>
+</li>
+<li>
+<p>minimum and maximum working set sizes</p>
+</li>
+</ul>
+<h2 id="process-environment-block-peb">
+  Process Environment Block (PEB)
+  <a class="heading-link" href="#process-environment-block-peb">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>There are three important structures associated with a process:</p>
+<ul>
+<li>PEB (resides in the user mod)</li>
+<li>KPROCESS (resides in kernel mod)</li>
+<li>EPROCESS (resides in kernel mod)</li>
+</ul>
+<p>TL;DR — What is a structure?
+A structure is a predefined layout in memory that holds related data — in this context, it stores key information about a process.</p>
+<p>For now, I’ll explain only the PEB, so I can proudly say “I’ve conquered the peasant mode.”
+And believe me , you do not want to see the map that connects all the important structures together now. Your eyes will burn.</p>
+<p>Every process that spawns on your system has a PEB structure — except for System.exe, because it was sent down by the almighty kernel to oversee the land of the peasants ( I will talk more about the process in the windows core processes section ).</p>
+<p>The Process Environment Block (PEB) is a data structure in Windows that contains information about a process such as its parameters, startup information, allocated heap information, and loaded DLLs . It’s primarily used by the Windows loader and user-mode components to manage the process during execution. You can think of it as the process’s “personal file”, recording everything the OS needs to keep track of that process from where it came from to what it&rsquo;s carrying.</p>
+<h2 id="windows-core-processes">
+  Windows Core Processes
+  <a class="heading-link" href="#windows-core-processes">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h2 id="process-types">
+  Process Types
+  <a class="heading-link" href="#process-types">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2025
+     Aft3r D4rk 
+    
+  </section>
+</footer>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const el = document.getElementById("typed-name");
+    const text = el.getAttribute("data-typed");
+    let i = 0;
+    function type() {
+      if (i < text.length) {
+        el.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 150);
+      }
+    }
+    type();
+  });
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const el = document.getElementById("typed-whoami");
+    const text = el.getAttribute("data-typed");
+    let i = 0;
+    function type() {
+      if (i < text.length) {
+        el.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, 130);
+      }
+    }
+    type();
+  });
+</script>
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>
