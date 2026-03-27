@@ -1,284 +1,150 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <title>whoami · Aft3r D4rk</title>
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <title>
-  whoami · Aft3r D4rk
-</title>
-  <link rel="icon" href="/logo-dark.svg" type="image/x-icon">
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="author" content="Aft3r D4rk">
+  <meta name="description" content="DFIR, malware analysis, and cloud security blog by Aft3r D4rk.">
+  <meta name="keywords" content="cybersecurity, DFIR, malware, cloud security, windows internals">
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="light dark">
+  <!-- Favicon -->
+  <link rel="icon" href="/logo-dark.svg" type="image/svg+xml">
 
-
-
-
-<meta name="author" content="Aft3r D4rk">
-<meta name="description" content="
-
-
-  
-
-Hello over there — I&rsquo;m Aft3r D4rk.
-But the real question is: who are YOU? (I hope you got the reference.)
-My main interest are endpoint security and cloud security . This blog will be about Windows Internals, Malware Analysis, Malware Development and maybe OSINT ( no i do not stalk people ) and reverse engineering from CrackMe challenges.
-Certifications I hold worth mentioning:">
-
-<meta name="keywords" content="blog,developer,personal">
-
-
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="whoami">
-  <meta name="twitter:description" content="Hello over there — I’m Aft3r D4rk.
-But the real question is: who are YOU? (I hope you got the reference.)
-My main interest are endpoint security and cloud security . This blog will be about Windows Internals, Malware Analysis, Malware Development and maybe OSINT ( no i do not stalk people ) and reverse engineering from CrackMe challenges.
-Certifications I hold worth mentioning:">
-
-<meta property="og:url" content="https://aft3rd4rk.github.io/about/">
-  <meta property="og:site_name" content="Aft3r D4rk">
-  <meta property="og:title" content="whoami">
-  <meta property="og:description" content="Hello over there — I’m Aft3r D4rk.
-But the real question is: who are YOU? (I hope you got the reference.)
-My main interest are endpoint security and cloud security . This blog will be about Windows Internals, Malware Analysis, Malware Development and maybe OSINT ( no i do not stalk people ) and reverse engineering from CrackMe challenges.
-Certifications I hold worth mentioning:">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:published_time" content="2025-07-11T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-07-11T00:00:00+00:00">
-
-
-
-
-<link rel="canonical" href="https://aft3rd4rk.github.io/about/">
-
-
-<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
-
-
-  
-  
-  <link rel="stylesheet" href="/css/coder.css" media="screen">
-
-
-
-
-
-
-  
-    
-    
-    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
-  
-
-
-
- 
-  
-    
-    <link rel="stylesheet" href="/css/custom.css" media="screen">
-  
-
-
-
-
-
-<link rel="icon" type="image/svg+xml" href="#ZgotmplZ" sizes="any">
-<link rel="icon" type="image/png" href="#ZgotmplZ" sizes="32x32">
-<link rel="icon" type="image/png" href="#ZgotmplZ" sizes="16x16">
-
-<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
-
-
-
-
-
-
-
-
-
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/coder.css">
+  <link rel="stylesheet" href="/css/coder-dark.css">
+  <link rel="stylesheet" href="/css/custom.css">
 </head>
 
+<body class="colorscheme-auto page-about">
 
-
-
-
-
-<body class="preload-transitions colorscheme-auto page-about">
-  
-<div class="float-container">
+  <!-- Dark Mode Toggle -->
+  <div class="float-container">
     <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+      <i class="fa-solid fa-adjust"></i>
     </a>
-</div>
-
+  </div>
 
   <main class="wrapper">
+
+    <!-- Navigation -->
     <nav class="navigation">
-  <section class="container">
-    
-    <a class="navigation-title" href="https://aft3rd4rk.github.io/">
-  <strong>Aft3r D4rk</strong>
-</a>
-    
-    
-      <input type="checkbox" id="menu-toggle" />
-      <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
-      </label>
-      <ul class="navigation-list">
-         
-          
-            <li class="navigation-item">
-              <a class="navigation-link " href="/posts/">Blog</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link " href="/about/">About</a>
-            </li>
-          
-        
-        
-      </ul>
-    
-  </section>
-</nav>
-
-
-    <div class="content">
-      
-  <section class="container page">
-  <article>
-    <header>
-      <h1 class="title">
-        <a class="title-link" href="http://localhost:1313/about/">
-          whoami
+      <section class="container">
+        <a class="navigation-title" href="/">
+          <strong>Aft3r D4rk</strong>
         </a>
-      </h1>
-    </header>
 
-    <h1 id="typed-whoami" data-typed="whoami.exe"></h1>
-<!-- Centered and Circular Avatar -->
-<p style="text-align: center;">
-  <img src="https://cdn.pfps.gg/pfps/5059-thomas-shelby.png" alt="avatar" width="150" style="border-radius: 50%;">
-</p>
-<p>Hello over there — I&rsquo;m <strong>Aft3r D4rk</strong>.<br>
-But the real question is: <strong>who are <em>YOU</em>?</strong> ( YOU TV show reference )</p>
-<p>I'M a technical wild card guy anything complex and game changer skill is my play ground. My main intreset DFIR, malware development/analysis and cloud security.  </p>
-<p>Certifications I hold worth mentioning:</p>
-<ul>
-  <li>CRTO</li>
-  <li>CRTP</li>
-  <li>BTL1</li>
-  <li>AWS Security Specialty</li>
-</ul>
-<p>One more thing: 7 minutes, 7 minutes is all i can spare to write a blog everyweek. Here I'm offering my precious time ( Resident Evil 5 reference ) </p></main>
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a class="navigation-link" href="/posts/">Blog</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="/about/">About</a>
+          </li>
+        </ul>
+      </section>
+    </nav>
 
-  </article>
-</section>
+    <!-- Content -->
+    <div class="content">
+      <section class="container page">
+        <article>
 
-  
+          <header>
+            <h1 class="title">whoami</h1>
+          </header>
 
+          <!-- Typing Effect -->
+          <h1 id="typed-whoami" data-typed="whoami.exe">whoami.exe</h1>
+
+          <!-- Avatar -->
+          <p style="text-align:center;">
+            <img src="/images/avatar.png" alt="avatar" width="150" style="border-radius:50%;">
+          </p>
+
+          <!-- Intro -->
+          <p>
+            Hello there — I’m <strong>Aft3r D4rk</strong>.<br>
+            But the real question is: <strong>who are <em>YOU</em>?</strong>
+            (yes, that’s a <em>YOU</em> reference)
+          </p>
+
+          <p>
+            I’m a technical wildcard — complex, high-impact problems are my playground.
+            My main focus areas include DFIR, malware development & analysis, and cloud security.
+          </p>
+
+          <!-- Focus Areas -->
+          <p><strong>Focus Areas:</strong></p>
+          <ul>
+            <li>Digital Forensics & Incident Response (DFIR)</li>
+            <li>Malware Development & Analysis</li>
+            <li>Windows Internals</li>
+            <li>Cloud Security (AWS)</li>
+            <li>Threat Detection Engineering</li>
+          </ul>
+
+          <!-- Certifications -->
+          <p><strong>Certifications:</strong></p>
+          <ul>
+            <li>CRTO</li>
+            <li>CRTP</li>
+            <li>BTL1</li>
+            <li>AWS Security Specialty</li>
+          </ul>
+
+          <!-- Closing -->
+          <p>
+            One more thing: <strong>7 minutes.</strong><br>
+            That’s all I can spare each week to write here.
+            (Resident Evil fans will get it.)
+          </p>
+
+          <p>
+            This blog is where I invest that time — sharing things that actually matter.
+          </p>
+
+        </article>
+      </section>
     </div>
 
+    <!-- Footer -->
     <footer class="footer">
-  <section class="container">
-    ©
-    
-      2019 -
-    
-    2026
-     Aft3r D4rk 
-    
-  </section>
-</footer>
+      <section class="container">
+        © 2019 - 2026 Aft3r D4rk
+      </section>
+    </footer>
 
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const el = document.getElementById("typed-name");
-    const text = el.getAttribute("data-typed");
-    let i = 0;
-    function type() {
-      if (i < text.length) {
-        el.innerHTML += text.charAt(i);
-        i++;
-        setTimeout(type, 150);
-      }
-    }
-    type();
-  });
-</script>
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const el = document.getElementById("typed-whoami");
-    const text = el.getAttribute("data-typed");
-    let i = 0;
-    function type() {
-      if (i < text.length) {
-        el.textContent += text.charAt(i);
-        i++;
-        setTimeout(type, 130);
-      }
-    }
-    type();
-  });
-</script>
   </main>
 
-  
+  <!-- Typing Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const el = document.getElementById("typed-whoami");
+      const text = el.getAttribute("data-typed");
+      let i = 0;
 
-  
-  
+      function type() {
+        if (i < text.length) {
+          el.textContent = text.substring(0, i + 1);
+          i++;
+          setTimeout(type, 120);
+        }
+      }
+
+      el.textContent = "";
+      type();
+    });
+  </script>
+
+  <!-- Theme Script -->
   <script src="/js/coder.js"></script>
-  
 
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
 </body>
 </html>
+```
